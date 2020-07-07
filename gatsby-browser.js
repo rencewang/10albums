@@ -1,1 +1,3 @@
-import "./src/styles/global.scss"
+import "./src/styles/global.sass"
+import "./src/styles/album.sass"
+

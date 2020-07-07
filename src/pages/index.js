@@ -1,15 +1,17 @@
 import React from "react"
-import Link from "gatsby-link"
-import PageYear from "../components/year"
-import Layout from "../components/layout"
+import Album from "../components/album"
+import Link from "gatsby-plugin-transition-link"
+import TransitionLink from "gatsby-plugin-transition-link"
 
 
 export default () =>
-  <div>
-    <Layout>
-      <h1>Hello world!</h1>
-      <PageYear year="2010" />
-      <Link to="/hi/">hi</Link>
-    </Layout>
-
-  </div>
+  <main>
+    <Album
+      year="2010"
+      name="Speak Now"
+      artist="Taylor Swift"
+      quote={"Long live all the \n mountains we moved \n I had the time of my life \n Fighting dragons with you"}
+      albumDescription={"Taylor Swift refuses to be defined by critics and the media with this self-written introspection that captures the complicated rush of teenage and maturity."}
+      albumCover="http://placekitten.com/300/200"
+    />
+  </main>
