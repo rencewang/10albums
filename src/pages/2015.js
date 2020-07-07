@@ -11,7 +11,7 @@ export default () =>
       name="E•MO•TION"
       artist="Carly Rae Jepsen"
       quote={"I'll be your sinner \n in secret"}
-      albumDescription={"CRJ delivers an energetic and effervescent portrayal of love that shines even in spite of the dark hours, brutal truths, and stinging heartaches."}
+      albumDescription={"CRJ delivers an energetic and effervescent portrayal of love that shines brilliantly in spite of the dark hours, brutal truths, and stinging heartaches."}
       albumCover="http://placekitten.com/300/200"
     />
   </main>

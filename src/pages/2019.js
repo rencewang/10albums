@@ -7,11 +7,11 @@ import TransitionLink from "gatsby-plugin-transition-link"
 export default () => 
   <main>
     <Album
-      year="2014"
-      name="1989"
-      artist="Taylor Swift"
-      quote={"When the sun came up \n I was looking at you"}
-      albumDescription={"Taylor Swift produces this meticulously-edited kaleidoscopic story of starting over in New York City with a genre-shifting effort turned global sensation that crowned her as pop royalty."}
+      year="2019"
+      name="Norman Fucking Rockwell!"
+      artist="Lana Del Rey"
+      quote={"I'm a fuckin' mess, but I \n Oh, thanks for the high life \n Baby, it's the best, passed the test and yes"}
+      albumDescription={"Lana Del Rey is heralded as the \"Next Best American Songwriter\" with a personal masterpiece of unfiltered hope and desperation that brings out the best and worst of our time."}
       albumCover="http://placekitten.com/300/200"
     />
   </main>

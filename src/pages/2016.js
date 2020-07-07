@@ -7,11 +7,11 @@ import TransitionLink from "gatsby-plugin-transition-link"
 export default () => 
   <main>
     <Album
-      year="2012"
-      name="GOOD KID, M.A.A.D CITY"
-      artist="Kendrick Lamar"
-      quote={"This m.A.A.d city I run"}
-      albumDescription={"Kendrick Lamar takes us on a tour to Compton, California with this cohesive, fundamentally relatable story that transcends racial boundaries."}
+      year="2016"
+      name="Lemonade"
+      artist="Beyoncé"
+      quote={"Dishes smashed on my counter \n from our last encounter"}
+      albumDescription={"Beyonce shows what it is like being black, a woman, a daughter, a wife, through an almost contradictory exploration that ultimately proves she’s got it all."}
       albumCover="http://placekitten.com/300/200"
     />
   </main>
