@@ -8,7 +8,6 @@ import AlbumQuote from "../components/quote"
 import AlbumCover from "../components/cover"
 import Cursor from "../components/cursor"
 
-
 export default function Album(props) {
   return (
     <Cursor>
