@@ -14,4 +14,6 @@ export default () =>
       albumDescription={"Taylor Swift refuses to be defined by critics and the media with this self-written introspection that captures the complicated rush of teenage and maturity."}
       albumCover="http://placekitten.com/300/200"
     />
+    <img src="../images/cursorright.svg" />
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/cursor-next.svg" />
   </main>
