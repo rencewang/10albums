@@ -8,6 +8,12 @@ module.exports = {
   /* Your site config here */
   plugins: [
     `gatsby-plugin-sass`,
-    `gatsby-plugin-transition-link`
+    `gatsby-plugin-transition-link`, 
+
+    // new webpack.ProvidePlugin({
+    //   $: 'jquery',
+    //   jQuery: 'jquery',
+    //   'window.jQuery': 'jquery'
+    // }),
   ],
 }
