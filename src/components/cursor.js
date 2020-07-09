@@ -7,7 +7,9 @@ import TransitionLink from "gatsby-plugin-transition-link"
 
 function Cursor({ children }) {
 
-    const currentNum = isNaN(parseInt((window.location.pathname).replace("/", ""))) ? 0 : parseInt((window.location.pathname).replace("/", ""))
+    const halfWidth = typeof window !== `undefined` ? $(window).width() / 2 : null
+    const currentPath = typeof window !== `undefined` ? window.location.pathname : null
+    const currentNum = isNaN(parseInt((currentPath).replace("/", ""))) ? 0 : parseInt((currentPath).replace("/", ""))
     let prevlink, nextlink = ""
     if (currentNum === 0) {
         prevlink = "/2019"
@@ -18,20 +20,22 @@ function Cursor({ children }) {
     }
 
     const handleMouseMove = e => {
-        const cursor = document.querySelector("#cursor")
+        const cursor = typeof document !== `undefined` ? document.querySelector("#cursor") : null
         cursor.classList.remove("cursor-prev", "cursor-next")
-        if (e.clientX > $(window).width() / 2) {
-        cursor.classList.add("cursor-next")
+        if (e.clientX > halfWidth) {
+            cursor.classList.add("cursor-next")
         } else {
-        cursor.classList.add("cursor-prev")
+            cursor.classList.add("cursor-prev")
         }
     }
 
     const handleClick = e => {
-        if (e.clientX > $(window).width() / 2) {
-            window.location = nextlink;
-        } else {
-            window.location = prevlink;
+        if (typeof window !== `undefined`) {
+            if (e.clientX > halfWidth) {
+                window.location = nextlink;
+            } else {
+                window.location = prevlink;
+            }
         }
     }
 
