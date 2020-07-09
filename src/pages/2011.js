@@ -15,7 +15,7 @@ export default () => {
   const [coverUrl, setUrl] = useState()
 
   useEffect(() => {
-    fetch(`http://ws.audioscrobbler.com/2.0/?method=album.getInfo&api_key=d480a44e0bca768c6231ebdcd3cdbd3e&mbid=${albumMBID}&format=json`)
+    fetch(`https://ws.audioscrobbler.com/2.0/?method=album.getInfo&api_key=d480a44e0bca768c6231ebdcd3cdbd3e&mbid=${albumMBID}&format=json`)
       .then(response => {
         if (response.ok) {
           return response.json();
@@ -23,7 +23,6 @@ export default () => {
         throw new Error('error');
       })
       .then (json => {
-        console.log(json.album.name)
         const orgDetail = String(json.album.wiki.content)
         setDetail(orgDetail.slice(0, orgDetail.indexOf("<")).replace(/\.([^\s\d])/g, '. $1'))
         setAlbumName(json.album.name)
