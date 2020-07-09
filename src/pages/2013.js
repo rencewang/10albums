@@ -8,9 +8,9 @@ export default () => {
   const albumQuote = "You are what you love \n not who loves you"
   const description = "Fall Out Boy makes a brave, intense tribute to being passionate and young at a time which seemingly makes the former difficult and the latter impossible."
   const albumYear = "2013"
+  const detail = "Save Rock And Roll is the fifth studio album by American rock band Fall Out Boy. It was produced by Butch Walker and released April 12, 2013, through Island Records. On October 15, the album was re-released with PAX AM Days, an extended play the band recorded shortly after Save Rock And Roll's release.Save Rock And Roll debuted at number one on the U.S. Billboard 200 with 154,000 first week sales, earning the band its second career number one. Rolling Stone described the band's comeback as a \"rather stunning renaissance\", and the record received positive reviews upon its release"
 
   const [artistName, setArtistName] = useState("")
-  const [detail, setDetail] = useState("")
   const [albumName, setAlbumName] = useState("")
   const [coverUrl, setUrl] = useState()
 
@@ -20,8 +20,6 @@ export default () => {
         return response.json()
       })
       .then (json => {
-        const orgDetail = String(json.album.wiki.content)
-        setDetail(orgDetail.slice(0, orgDetail.indexOf("<")).replace(/\.([^\s\d])/g, '. $1'))
         setAlbumName(json.album.name)
         setArtistName(json.album.artist)
         setUrl(json.album.image[3]['#text'].replace("300x300", "600x600"))
