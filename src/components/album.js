@@ -1,4 +1,6 @@
 import React from "react"
+import { Helmet } from 'react-helmet'
+import { siteMetadata } from "../../gatsby-config"
 
 import Header from "../components/header"
 import AlbumYear from "../components/year"
@@ -11,6 +13,9 @@ import Cursor from "../components/cursor"
 export default function Album(props) {
   return (
     <Cursor>
+      <Helmet>
+        <title>{props.year} | {siteMetadata.title}</title>
+      </Helmet>
       <main>
         <Header />
         <AlbumYear year={props.year} />

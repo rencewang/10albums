@@ -38,8 +38,6 @@ function Cursor({ children }) {
     return (
         <div id="cursor" onMouseMove={handleMouseMove} onClick={handleClick}>
             {children}
-            <a href={prevlink}>prev</a>
-            <a href={nextlink}>next</a>
         </div>
     )
 }
