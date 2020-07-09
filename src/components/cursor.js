@@ -6,32 +6,34 @@ import TransitionLink from "gatsby-plugin-transition-link"
 
 
 function Cursor({ children }) {
-
-    const halfWidth = typeof window !== `undefined` ? $(window).width() / 2 : null
-    const currentPath = typeof window !== `undefined` ? window.location.pathname : null
-    const currentNum = isNaN(parseInt((currentPath).replace("/", ""))) ? 0 : parseInt((currentPath).replace("/", ""))
+    
     let prevlink, nextlink = ""
-    if (currentNum === 0) {
-        prevlink = "/2019"
-        nextlink = "/2011"
-    } else {
-        prevlink = "/" + (currentNum === 2011 ? "" : currentNum - 1)
-        nextlink = "/" + (currentNum === 2019 ? "" : currentNum + 1)
+    if (typeof window !== `undefined`) {
+        const currentNum = isNaN(parseInt((window.location.pathname).replace("/", ""))) ? 0 : parseInt((window.location.pathname).replace("/", ""))
+        if (currentNum === 0) {
+            prevlink = "/2019"
+            nextlink = "/2011"
+        } else {
+            prevlink = "/" + (currentNum === 2011 ? "" : currentNum - 1)
+            nextlink = "/" + (currentNum === 2019 ? "" : currentNum + 1)
+        }
     }
 
     const handleMouseMove = e => {
-        const cursor = typeof document !== `undefined` ? document.querySelector("#cursor") : null
-        cursor.classList.remove("cursor-prev", "cursor-next")
-        if (e.clientX > halfWidth) {
-            cursor.classList.add("cursor-next")
-        } else {
-            cursor.classList.add("cursor-prev")
+        if (typeof window !== `undefined` && typeof document !== `undefined`) {
+            const cursor = document.querySelector("#cursor")
+            cursor.classList.remove("cursor-prev", "cursor-next")
+            if (e.clientX > $(window).width() / 2) {
+                cursor.classList.add("cursor-next")
+            } else {
+                cursor.classList.add("cursor-prev")
+            }
         }
     }
 
     const handleClick = e => {
         if (typeof window !== `undefined`) {
-            if (e.clientX > halfWidth) {
+            if (e.clientX > $(window).width() / 2) {
                 window.location = nextlink;
             } else {
                 window.location = prevlink;
