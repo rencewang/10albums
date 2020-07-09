@@ -18,7 +18,10 @@ export default () => {
   useEffect(() => {
     fetch(`http://ws.audioscrobbler.com/2.0/?method=album.getInfo&api_key=d480a44e0bca768c6231ebdcd3cdbd3e&mbid=${albumMBID}&format=json`)
       .then(response => {
-        return response.json()
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error('error');
       })
       .then (json => {
         const orgDetail = String(json.album.wiki.content)

@@ -8,5 +8,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`, 
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-palette`,
   ],
 }
