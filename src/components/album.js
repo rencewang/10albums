@@ -2,11 +2,6 @@ import React from "react"
 import { Helmet } from 'react-helmet'
 import { siteMetadata } from "../../gatsby-config"
 
-import Header from "../components/header"
-import AlbumYear from "../components/year"
-import AlbumName from "../components/name"
-import AlbumArtist from "../components/artist"
-import AlbumQuote from "../components/quote"
 import AlbumCover from "../components/cover"
 import Cursor from "../components/cursor"
 
@@ -17,12 +12,37 @@ export default function Album(props) {
         <title>{props.year} | {siteMetadata.title}</title>
       </Helmet>
       <main>
-        <Header />
-        <AlbumYear year={props.year} />
-        <AlbumName name={props.name} />
-        <AlbumArtist artist={props.artist} />
-        <AlbumQuote quote={props.quote} />
-        <AlbumCover albumDescription={props.albumDescription} albumCover={props.albumCover} albumDetail={props.albumDetail}/>
+
+        <header className="header-container">
+          <div className="header-title">
+                {siteMetadata.title}
+          </div>
+        </header>
+        
+        <div className="big-year">
+            {props.year}
+        </div>
+        
+        <div className="album-name">
+            {props.name}
+        </div>
+        
+        <div className="artist">
+            {props.artist}
+        </div>
+
+        <div className="album-quote">
+            {props.quote.split("\n").map((i,key) => {
+                return <div key={key}>{i}</div>;
+            })}
+        </div>
+
+        <div className="album-description">
+          {props.albumDescription}
+        </div>
+
+        <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
+
       </main>
     </Cursor>
   )
