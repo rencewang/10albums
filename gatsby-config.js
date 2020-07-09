@@ -8,6 +8,11 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`, 
     `gatsby-plugin-react-helmet`,
-
+    // resolve: 'gatsby-source-rest-api',
+    //   options: {
+    //     endpoints: [
+    //       'https://jsonplaceholder.typicode.com/posts',
+    //     ],
+    //   },
   ],
 }

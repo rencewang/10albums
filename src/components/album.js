@@ -22,7 +22,7 @@ export default function Album(props) {
         <AlbumName name={props.name} />
         <AlbumArtist artist={props.artist} />
         <AlbumQuote quote={props.quote} />
-        <AlbumCover albumDescription={props.albumDescription} albumCover={props.albumCover} />
+        <AlbumCover albumDescription={props.albumDescription} albumCover={props.albumCover} albumDetail={props.albumDetail}/>
       </main>
     </Cursor>
   )
