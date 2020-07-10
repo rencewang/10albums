@@ -6,7 +6,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 export default () => {
   const albumName = "Melodrama"
   const artistName = "Lorde"
-  const albumQuote = "Maybe we just \n do it violently"
+  const albumQuote = "Now we sit in your car \n and our love is a ghost \n Well I guess I should go \n Yeah I guess I should go"
   const description = "Lorde’s idea of youth is acute, complete, and unconditional. Perhaps it’s imperfect, but the stubborn, tenacious, yet sinister vitality is precious and impossible to compound."
   const albumYear = "2017"
 

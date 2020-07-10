@@ -5,7 +5,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 
 export default () => {
   const albumMBID = "f6b77446-f07e-4768-bd34-f8baa90b9b4b"
-  const albumQuote = "You are what you love \n not who loves you"
+  const albumQuote = "If heaven's grief \n brings hell's rain, \n Then I'd trade all my tomorrows \n for just one yesterday."
   const description = "Fall Out Boy makes a brave, intense tribute to being passionate and young at a time which seemingly makes the former difficult and the latter impossible."
   const albumYear = "2013"
   const detail = "Save Rock And Roll is the fifth studio album by American rock band Fall Out Boy. It was produced by Butch Walker and released April 12, 2013, through Island Records. On October 15, the album was re-released with PAX AM Days, an extended play the band recorded shortly after Save Rock And Roll's release.Save Rock And Roll debuted at number one on the U.S. Billboard 200 with 154,000 first week sales, earning the band its second career number one. Rolling Stone described the band's comeback as a \"rather stunning renaissance\", and the record received positive reviews upon its release"

@@ -5,7 +5,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 
 export default () => {
   const albumMBID = "e1d99364-1ad9-4f4d-9505-2242eff10a44"
-  const albumQuote = "This m.A.A.d city I run"
+  const albumQuote = "But what am I 'posed to do \n when the topic is red or blue"
   const description = "Kendrick Lamar takes us on a tour to Compton, California with this cohesive, fundamentally relatable story that transcends racial boundaries."
   const albumYear = "2012"
 

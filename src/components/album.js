@@ -6,10 +6,17 @@ import Palette, { usePalette } from 'react-palette'
 import AlbumCover from "../components/cover"
 import Cursor from "../components/cursor"
 import "../styles/album.sass"
+import "../styles/global.sass"
 
 export default function Album(props) {
 
   const { data, loading, error } = usePalette(props.albumCover)
+  console.log(data.vibrant)
+  console.log(data.muted)
+  console.log(data.lightVibrant)
+  console.log(data.darkVibrant)
+  console.log(data.lightMuted)
+  console.log(data.darkMuted)
 
   return (
     <Cursor>
@@ -20,25 +27,18 @@ export default function Album(props) {
       <main>
         <div className="main-bg" style={{background: `linear-gradient(to right bottom, ${data.lightVibrant}, ${data.darkMuted})`}}> </div>
 
-        {data.vibrant}
-        {data.muted}
-
         <header className="header-container">
           <div className="header-title">
                 {siteMetadata.title}
           </div>
-        </header>
-        
-        <div className="big-year">
+
+          <div className="big-year">
             {props.year}
         </div>
+        </header>
         
         <div className="album-name">
-            {props.name}
-        </div>
-        
-        <div className="artist">
-            {props.artist}
+            {props.name.replace("(Deluxe)", "")}
         </div>
 
         <div className="album-quote">
