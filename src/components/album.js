@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from 'react-helmet'
 import { siteMetadata } from "../../gatsby-config"
-import Palette, { usePalette } from 'react-palette'
+import { usePalette } from 'react-palette'
 
 import AlbumCover from "../components/cover"
 import Cursor from "../components/cursor"
@@ -25,7 +25,7 @@ export default function Album(props) {
       </Helmet>
 
       <main>
-        <div className="main-bg" style={{background: `linear-gradient(to right bottom, ${data.lightVibrant}, ${data.darkMuted})`}}> </div>
+        <div className="main-bg" style={{background: `linear-gradient(to right bottom, ${data.lightVibrant}, ${data.darkMuted})`}}></div>
 
         <header className="header-container">
           <div className="header-title">
@@ -34,11 +34,13 @@ export default function Album(props) {
 
           <div className="big-year">
             {props.year}
-        </div>
+          </div>
         </header>
         
-        <div className="album-name">
+        <div className="album-name-container">
+          <div id="album-name">
             {props.name.replace("(Deluxe)", "")}
+          </div>
         </div>
 
         <div className="album-quote">
@@ -52,6 +54,10 @@ export default function Album(props) {
         </div>
 
         <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
+
+        <footer className="footer-about">
+          About
+        </footer>
 
       </main>
     </Cursor>

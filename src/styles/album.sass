@@ -1,26 +1,43 @@
 @import 'global'
 
+// For Header & Footer ONLY
 .header-container 
     display: flex
     justify-content: space-between
     margin: 0 10px 0 10px
 
-.big-year,
-.header-title 
+@mixin header-text
     font-family: $TitleFont
     font-weight: 700
     font-size: 65px
 
-.album-name 
-    font-family: $AlbumTitleFont
-    font-style: italic
-    font-weight: 500
-    font-size: 300px
-    line-height: 250px
+.big-year
+    @include header-text
+    
+.header-title
+    @include header-text
+    
+.footer-about
+    @include header-text
+    position: fixed
+    z-index: 500
+    bottom: 0
+    margin: 0 10px 0 10px
+
+// For Album Title ONLY
+.album-name-container
     margin: -10px 0 0 0
     width: 80%
     word-wrap: break-word
+    font-family: $AlbumTitleFont
+    font-style: italic
+    font-weight: 500
 
+#album-name
+    font-size: 300px
+    line-height: 250px
+
+// For Text Content ONLY
 .album-description 
     font-family: $AlbumDesFont
     font-size: 30px
