@@ -6,19 +6,13 @@
     justify-content: space-between
     margin: 0 10px 0 10px
 
-@mixin header-text
+.header-text
     font-family: $TitleFont
     font-weight: 700
     font-size: 65px
-
-.big-year
-    @include header-text
-    
-.header-title
-    @include header-text
     
 .footer-about
-    @include header-text
+    @extend .header-text
     position: fixed
     z-index: 500
     bottom: 0

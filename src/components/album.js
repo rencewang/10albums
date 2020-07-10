@@ -10,6 +10,7 @@ import "../styles/global.sass"
 
 export default function Album(props) {
 
+  // primary colors of album cover returned
   const { data, loading, error } = usePalette(props.albumCover)
   console.log(data.vibrant)
   console.log(data.muted)
@@ -17,6 +18,21 @@ export default function Album(props) {
   console.log(data.darkVibrant)
   console.log(data.lightMuted)
   console.log(data.darkMuted)
+
+  // determines title font size
+  if (typeof window !== `undefined` && typeof document !== `undefined`) {
+    const titleClass = document.querySelector("#album-name")
+    const titleName = props.name
+    if (/^\d+$/.test(titleName)) {
+      titleClass.style.fontSize = '28vw'
+    } else if (!titleName.includes(" ")) {
+      titleClass.style.fontSize = '13.5vw'
+    } else if (titleName.length > 15) {
+      titleClass.style.fontSize = '17vw'
+    } else {
+      titleClass.style.fontSize = '21vw'
+    }
+  }
 
   return (
     <Cursor>
@@ -28,11 +44,11 @@ export default function Album(props) {
         <div className="main-bg" style={{background: `linear-gradient(to right bottom, ${data.lightVibrant}, ${data.darkMuted})`}}></div>
 
         <header className="header-container">
-          <div className="header-title">
+          <div className="header-text">
                 {siteMetadata.title}
           </div>
 
-          <div className="big-year">
+          <div className="header-text">
             {props.year}
           </div>
         </header>
