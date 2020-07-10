@@ -21,6 +21,7 @@ function Cursor({ children }) {
 
     const handleMouseMove = e => {
         if (typeof window !== `undefined` && typeof document !== `undefined`) {
+            // for left and right arrow switching
             const cursor = document.querySelector("#cursor")
             cursor.classList.remove("cursor-prev", "cursor-next")
             if (e.clientX > $(window).width() / 2) {
@@ -28,6 +29,15 @@ function Cursor({ children }) {
             } else {
                 cursor.classList.add("cursor-prev")
             }
+
+            // for cursor lightbox
+            const lightbox = document.querySelector("#cursor-lightbox")
+            lightbox.style.top = `${e.pageY - lightbox.clientHeight / 2}px`
+            lightbox.style.left = `${e.pageX - lightbox.clientWidth / 2}px`
+            // lightbox.css({
+            //     top: e.clientY - lightbox.height() / 2,
+            //     left: e.clientX - lightbox.width() / 2
+            // });
         }
     }
 
@@ -41,8 +51,23 @@ function Cursor({ children }) {
         }
     }
 
+    const mouseEnter = () => {
+        if (typeof window !== `undefined` && typeof document !== `undefined`) {
+            const lightbox = document.querySelector("#cursor-lightbox")
+            lightbox.style.opacity = 0
+        }
+    }
+
+    const mouseLeave = () => {
+        if (typeof window !== `undefined` && typeof document !== `undefined`) {
+            const lightbox = document.querySelector("#cursor-lightbox")
+            lightbox.style.opacity = 1
+        }
+    }
+
     return (
-        <div id="cursor" onMouseMove={handleMouseMove} onClick={handleClick}>
+        <div id="cursor" onMouseMove={handleMouseMove} onClick={handleClick} onMouseLeave={mouseEnter} onMouseEnter={mouseLeave}>
+            <div id="cursor-lightbox"></div>
             {children}
         </div>
     )
