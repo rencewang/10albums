@@ -34,10 +34,6 @@ function Cursor({ children }) {
             const lightbox = document.querySelector("#cursor-lightbox")
             lightbox.style.top = `${e.pageY - lightbox.clientHeight / 2}px`
             lightbox.style.left = `${e.pageX - lightbox.clientWidth / 2}px`
-            // lightbox.css({
-            //     top: e.clientY - lightbox.height() / 2,
-            //     left: e.clientX - lightbox.width() / 2
-            // });
         }
     }
 
