@@ -25,9 +25,6 @@ export default function Album(props) {
         titleClass.style.fontSize = '21vw'
       }
     }
-
-    // if (typeof window !== `undefined` && typeof document !== `undefined`) {
-    // }
   });
 
   // primary colors of album cover returned

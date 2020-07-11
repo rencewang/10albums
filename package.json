@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "10-albums-of-2010s",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "music that defined the decade",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
