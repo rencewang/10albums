@@ -17,7 +17,7 @@ export default function Album(props) {
     if (width < 1600 && width > 750) {
       if (/^\d+$/.test(titleName)) {
         titleClass.style.fontSize = '28vw'
-      } else if (!titleName.includes(" ")) {
+      } else if (!titleName.includes(" ") && !titleName.includes("•")) {
         titleClass.style.fontSize = '13.5vw'
       } else if (titleName.length > 15) {
         titleClass.style.fontSize = '15vw'

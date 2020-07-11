@@ -6,7 +6,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 export default () => {
   const albumName = "High As Hope"
   const artistName = "Florence + The Machine"
-  const albumQuote = "And it's Friday night and it's kicking in \n In that pink dress, they're gonna crucify me \n Oh and you in all your vibrant youth \n How could anything bad ever happen to you?"
+  const albumQuote = "Oh and you in all your vibrant youth \n How could anything bad ever happen to you?"
   const description = "Florence Welch pours her heart out in this vulnerable record that converts roaring emotions into subdued tunes that contain nostalgia and life itself."
   const albumYear = "2018"
   const detail = "High as Hope is the fourth studio album by the English indie rock band Florence + the Machine, released on 29 June 2018 by Republic Records and Virgin EMI Records. It was preceded by the singles \"Sky Full of Song\", \"Hunger\" and \"Big God\". The album was executively produced by Florence Welch herself, along with Emile Haynie. Following How Big, How Blue, How Beautiful (2015), \"High As Hope\" features more minimalist, stripped-down productions, and explores themes of heartache, family, and finding comfort in loneliness. The album received positive reviews upon release, with music critics lauding Welch's vocal performance and personal lyricism."

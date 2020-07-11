@@ -6,7 +6,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 export default () => {
   const albumName = "E•MO•TION"
   const artistName = "Carly Rae Jepsen"
-  const albumQuote = "I'll be your sinner, \n in secret. \n When the lights go out \n Run away with me"
+  const albumQuote = "I'll be your sinner, in secret. \n When the lights go out \n Run away with me"
   const description = "CRJ delivers an energetic and effervescent portrayal of love that shines brilliantly in spite of the grim deception, brutal truths, and stinging heartaches that may lie beneath."
   const albumYear = "2015"
 

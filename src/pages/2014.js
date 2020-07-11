@@ -6,7 +6,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 export default () => {
   const albumName = "1989 (Deluxe)"
   const artistName = "Taylor Swift"
-  const albumQuote = "It's 2AM \n in your car \n Windows down, you pass my street, the memories start \n It's 2AM \n in my room \n Headlights pass the window pane, I think of you"
+  const albumQuote = "It's 2AM \n in your car \n Windows down, you pass my street, \n the memories start \n It's 2AM \n in my room \n Headlights pass the window pane, \n I think of you"
   const description = "Taylor Swift produces this meticulously-edited kaleidoscopic story of starting over in New York City with a genre-shifting effort turned global sensation that crowned her as pop royalty."
   const albumYear = "2014"
 

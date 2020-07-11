@@ -6,7 +6,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 export default () => {
   const albumName = "Norman Fucking Rockwell!"
   const artistName = "Lana Del Rey"
-  const albumQuote = "I'm a fuckin' mess, but I \n Oh, thanks for the high life \n Baby, it's the best, passed the test and yes"
+  const albumQuote = "I'm a fuckin' mess, but I \n Oh, thanks for the high life"
   const description = "Lana Del Rey is heralded as the \"Next Best American Songwriter\" with a personal masterpiece of unfiltered hope and desperation that brings out the best and worst of our time."
   const albumYear = "2019"
 
