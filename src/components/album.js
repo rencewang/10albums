@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { siteMetadata } from "../../gatsby-config"
 import { usePalette } from 'react-palette'
 import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import AlbumCover from "../components/cover"
 import Cursor from "../components/cursor"
@@ -88,29 +89,13 @@ export default function Album(props) {
           <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
 
           <footer className="footer-nav">
-            <TransitionLink
-              to={prevlink}
-              exit={{
-                length: 1
-              }}
-              entry={{
-                delay: 0.6
-              }}
-            >
+            <AniLink swipe direction="right" swipe top="entry" to={prevlink} hex="#663399" entryOffset={80} duration={1}>
               PREV
-            </TransitionLink>
+            </AniLink>
             <span> </span>/<span> </span>
-            <TransitionLink
-              to={nextlink}
-              exit={{
-                length: 1
-              }}
-              entry={{
-                delay: 0.6
-              }}
-            >
+            <AniLink swipe direction="left" swipe top="entry" to={nextlink} hex="#663399" entryOffset={80} duration={1}>
               NEXT
-            </TransitionLink>
+            </AniLink>
           </footer>
 
         </div>

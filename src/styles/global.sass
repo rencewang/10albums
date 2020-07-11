@@ -12,6 +12,12 @@ $ImageWidth: 80vh
 *
     box-sizing: border-box
 
+body
+    margin: 0
+    height: 100vh
+    width: 100vw
+    overflow: hidden
+
 @mixin fixedbg
     left: 0
     top: 0
@@ -44,6 +50,7 @@ a
 #cursor 
     @include fixedbg
     cursor: none
+    overflow: hidden
 
 .cursor-prev 
     cursor: url(../images/cursorleft.svg) 50 50, auto
