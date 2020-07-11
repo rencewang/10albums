@@ -32,6 +32,7 @@ function Cursor({ children }) {
 
             // for cursor lightbox
             const lightbox = document.querySelector("#cursor-lightbox")
+            lightbox.style.opacity = 1
             lightbox.style.top = `${e.pageY - lightbox.clientHeight / 2}px`
             lightbox.style.left = `${e.pageX - lightbox.clientWidth / 2}px`
         }
