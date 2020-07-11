@@ -89,7 +89,7 @@ export default function Album(props) {
 
           <footer className="footer-nav">
             <TransitionLink
-              to="/2019"
+              to={prevlink}
               exit={{
                 length: 1
               }}
@@ -101,7 +101,7 @@ export default function Album(props) {
             </TransitionLink>
             <span> </span>/<span> </span>
             <TransitionLink
-              to="/2011"
+              to={nextlink}
               exit={{
                 length: 1
               }}
