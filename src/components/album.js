@@ -47,39 +47,41 @@ export default function Album(props) {
 
       <main>
         <div className="main-bg" style={{background: `linear-gradient(to right bottom, ${data.lightVibrant}, ${data.darkMuted})`}}></div>
+        <div className="album-container">
 
-        <header className="header-container">
-          <div className="header-text">
-                {siteMetadata.title}
+          <header className="header-container">
+            <div className="header-text">
+                  {siteMetadata.title}
+            </div>
+
+            <div className="header-text">
+              {props.year}
+            </div>
+          </header>
+          
+          <div className="album-name-container">
+            <div id="album-name">
+              {props.name.replace("(Deluxe)", "")}
+            </div>
           </div>
 
-          <div className="header-text">
-            {props.year}
+          <div className="album-quote">
+              {props.quote.split("\n").map((i,key) => {
+                  return <div key={key}>{i}</div>;
+              })}
           </div>
-        </header>
-        
-        <div className="album-name-container">
-          <div id="album-name">
-            {props.name.replace("(Deluxe)", "")}
+
+          <div className="album-description">
+            {props.albumDescription}
           </div>
+
+          <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
+
+          <footer className="footer-about">
+            About
+          </footer>
+
         </div>
-
-        <div className="album-quote">
-            {props.quote.split("\n").map((i,key) => {
-                return <div key={key}>{i}</div>;
-            })}
-        </div>
-
-        <div className="album-description">
-          {props.albumDescription}
-        </div>
-
-        <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
-
-        <footer className="footer-about">
-          About
-        </footer>
-
       </main>
     </Cursor>
   )
