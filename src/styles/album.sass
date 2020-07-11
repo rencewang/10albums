@@ -15,32 +15,48 @@
     @extend .header-text
     position: fixed
     z-index: 500
-    bottom: 0
-    margin: 0 10px 0 10px
+    bottom: 10px
+    left: 10px
 
 // For Album Title ONLY
 .album-name-container
-    margin: -10px 0 0 0
+    margin: 0 0 0 10px
     width: 80%
     word-wrap: break-word
     font-family: $AlbumTitleFont
     font-style: italic
     font-weight: 500
+    z-index: 0
 
 #album-name
     font-size: 300px
-    line-height: 250px
+    line-height: 80%
 
 // For Text Content ONLY
 .album-description 
     font-family: $AlbumDesFont
     font-size: 30px
     text-align: right
+    z-index: 0
 
 .album-quote 
     font-family: $AlbumQuoteFont
     font-weight: 400
     font-size: 35px
+    z-index: 0
+
+.album-cover
+    position: fixed
+    bottom: 10px
+    right: 10px
+    .album-cover-image
+        height: 80vh
+        width: 80vh
+        z-index: -500
+        // transition: filter 0.5s
+        // &:hover
+        //     -webkit-filter: grayscale(100%)
+        //     filter: grayscale(100%)
 
 // Deprecate
 .artist 

@@ -5,7 +5,7 @@ export default function cover(props) {
     return (
         <div className="album-cover">
             {/* {props.albumDetail} */}
-            <img src={props.albumCover} />
+            <img className="album-cover-image" src={props.albumCover} />
         </div>
     )
   }

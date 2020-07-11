@@ -39,6 +39,8 @@ function Cursor({ children }) {
     }
 
     const handleClick = e => {
+        const lightbox = document.querySelector("#cursor-lightbox")
+        lightbox.style.opacity = 0
         if (typeof window !== `undefined`) {
             if (e.clientX > $(window).width() / 2) {
                 window.location = nextlink;

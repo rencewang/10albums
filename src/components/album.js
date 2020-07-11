@@ -20,12 +20,12 @@ export default function Album(props) {
       } else if (!titleName.includes(" ")) {
         titleClass.style.fontSize = '13.5vw'
       } else if (titleName.length > 15) {
-        titleClass.style.fontSize = '17vw'
+        titleClass.style.fontSize = '15vw'
       } else {
         titleClass.style.fontSize = '21vw'
       }
     }
-    
+
     // if (typeof window !== `undefined` && typeof document !== `undefined`) {
     // }
   });
