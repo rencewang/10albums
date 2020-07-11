@@ -2,8 +2,7 @@ import React, {useEffect} from "react"
 import { Helmet } from 'react-helmet'
 import { siteMetadata } from "../../gatsby-config"
 import { usePalette } from 'react-palette'
-import TransitionLink from "gatsby-plugin-transition-link"
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import $ from "jquery"
 
 import AlbumCover from "../components/cover"
 import Cursor from "../components/cursor"
@@ -27,7 +26,13 @@ export default function Album(props) {
         titleClass.style.fontSize = '21vw'
       }
     }
-  });
+
+    // const loader = document.querySelector(".loader")
+    // $(window).on("load", function() {
+    //     loader.style.opacity = 0
+    //     loader.style.display = "none"
+    // }) 
+  })
 
   // primary colors of album cover returned
   const { data, loading, error } = usePalette(props.albumCover)
@@ -56,7 +61,7 @@ export default function Album(props) {
         <title>{props.year} | {siteMetadata.title}</title>
       </Helmet>
 
-      <main>
+      <div>
         <div className="main-bg" style={{background: `linear-gradient(to right bottom, ${data.lightVibrant}, ${data.darkMuted})`}}></div>
         <div className="album-container">
 
@@ -99,7 +104,7 @@ export default function Album(props) {
           </footer>
 
         </div>
-      </main>
+      </div>
     </Cursor>
   )
 }
