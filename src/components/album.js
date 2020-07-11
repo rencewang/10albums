@@ -2,8 +2,7 @@ import React, {useEffect} from "react"
 import { Helmet } from 'react-helmet'
 import { siteMetadata } from "../../gatsby-config"
 import { usePalette } from 'react-palette'
-import TransitionLink from "gatsby-plugin-transition-link"
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import $ from "jquery"
 
 import AlbumCover from "../components/cover"
 import Cursor from "../components/cursor"
@@ -37,18 +36,6 @@ export default function Album(props) {
   console.log(data.darkVibrant)
   console.log(data.lightMuted)
   console.log(data.darkMuted)
-
-  let prevlink, nextlink = ""
-  if (typeof window !== `undefined`) {
-      const currentNum = isNaN(parseInt((window.location.pathname).replace("/", ""))) ? 0 : parseInt((window.location.pathname).replace("/", ""))
-      if (currentNum === 0) {
-          prevlink = "/2019"
-          nextlink = "/2011"
-      } else {
-          prevlink = "/" + (currentNum === 2011 ? "" : currentNum - 1)
-          nextlink = "/" + (currentNum === 2019 ? "" : currentNum + 1)
-      }
-  }
 
   return (
     <Cursor>
@@ -88,7 +75,7 @@ export default function Album(props) {
 
           <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
 
-          <footer className="footer-nav">
+          {/* <footer className="footer-nav">
             <AniLink swipe direction="right" swipe top="entry" to={prevlink} hex="#663399" entryOffset={80} duration={1}>
               PREV
             </AniLink>
@@ -96,7 +83,7 @@ export default function Album(props) {
             <AniLink swipe direction="left" swipe top="entry" to={nextlink} hex="#663399" entryOffset={80} duration={1}>
               NEXT
             </AniLink>
-          </footer>
+          </footer> */}
 
         </div>
       </main>
