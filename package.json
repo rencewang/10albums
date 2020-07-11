@@ -3,7 +3,6 @@
   "private": true,
   "description": "music that defined the decade",
   "version": "0.1.0",
-  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

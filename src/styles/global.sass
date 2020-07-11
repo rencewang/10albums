@@ -23,6 +23,11 @@ $ImageWidth: 80vh
     @include fixedbg
     z-index: -999
 
+// Link ONLY
+a
+    text-decoration: none
+    color: #000
+
 // Custom Cursor ONLY
 #cursor-lightbox 
     position: fixed
@@ -33,11 +38,12 @@ $ImageWidth: 80vh
     pointer-events: none
     mix-blend-mode: difference
     z-index: 999
-    transition: opacity 0.5s
+    transition: opacity 0.5s, transform 0.5s
     opacity: 0
 
 #cursor 
     @include fixedbg
+    cursor: none
 
 .cursor-prev 
     cursor: url(../images/cursorleft.svg) 50 50, auto

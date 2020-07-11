@@ -37,6 +37,18 @@ export default function Album(props) {
   console.log(data.lightMuted)
   console.log(data.darkMuted)
 
+  let prevlink, nextlink = ""
+  if (typeof window !== `undefined`) {
+      const currentNum = isNaN(parseInt((window.location.pathname).replace("/", ""))) ? 0 : parseInt((window.location.pathname).replace("/", ""))
+      if (currentNum === 0) {
+          prevlink = "/2019"
+          nextlink = "/2011"
+      } else {
+          prevlink = "/" + (currentNum === 2011 ? "" : currentNum - 1)
+          nextlink = "/" + (currentNum === 2019 ? "" : currentNum + 1)
+      }
+  }
+
   return (
     <Cursor>
       <Helmet>
@@ -75,9 +87,31 @@ export default function Album(props) {
 
           <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
 
-          {/* <footer className="footer-about">
-            PREV / NEXT
-          </footer> */}
+          <footer className="footer-nav">
+            <TransitionLink
+              to="/2019"
+              exit={{
+                length: 1
+              }}
+              entry={{
+                delay: 0.6
+              }}
+            >
+              PREV
+            </TransitionLink>
+            <span> </span>/<span> </span>
+            <TransitionLink
+              to="/2011"
+              exit={{
+                length: 1
+              }}
+              entry={{
+                delay: 0.6
+              }}
+            >
+              NEXT
+            </TransitionLink>
+          </footer>
 
         </div>
       </main>
