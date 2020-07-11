@@ -6,7 +6,7 @@ import TransitionLink from "gatsby-plugin-transition-link"
 export default () => {
   const albumName = "Lemonade"
   const artistName = "Beyoncé"
-  const albumQuote = "Dishes smashed on my counter \n from our last encounter \n Pictures snatched out the frame \n Bitch, I scratched out your name and your face \n What is it about you that I can't erase, baby?"
+  const albumQuote = "Dishes smashed on my counter \n from our last encounter \n Pictures snatched out the frame \n Bitch, I scratched out your name \n and your face"
   const description = "Beyonce shows what it is like being black, a woman, a daughter, a wife, through an almost contradictory exploration that ultimately proves she’s got it all."
   const albumYear = "2016"
 
