@@ -2,7 +2,6 @@ import React, {useEffect} from "react"
 import { Helmet } from 'react-helmet'
 import { siteMetadata } from "../../gatsby-config"
 import { usePalette } from 'react-palette'
-import $ from "jquery"
 
 import AlbumCover from "../components/cover"
 import Cursor from "../components/cursor"
@@ -26,12 +25,6 @@ export default function Album(props) {
         titleClass.style.fontSize = '21vw'
       }
     }
-
-    // const loader = document.querySelector(".loader")
-    // $(window).on("load", function() {
-    //     loader.style.opacity = 0
-    //     loader.style.display = "none"
-    // }) 
   })
 
   // primary colors of album cover returned
@@ -81,15 +74,9 @@ export default function Album(props) {
 
           <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
 
-          {/* <footer className="footer-nav">
-            <AniLink swipe direction="right" swipe top="entry" to={prevlink} hex="#663399" entryOffset={80} duration={1}>
-              PREV
-            </AniLink>
-            <span> </span>/<span> </span>
-            <AniLink swipe direction="left" swipe top="entry" to={nextlink} hex="#663399" entryOffset={80} duration={1}>
-              NEXT
-            </AniLink>
-          </footer> */}
+          <footer className="footer-nav">
+              {props.artist}
+          </footer>
 
         </div>
       </div>

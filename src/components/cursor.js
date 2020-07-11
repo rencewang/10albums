@@ -17,14 +17,7 @@ function Cursor({ children }) {
     }
 
     useEffect(() => {
-        const links = document.querySelectorAll("a")
-        const lightbox = document.querySelector("#cursor-lightbox")
-        $("a").mouseenter(() => {
-            lightbox.style.transform = "scale(2)"
-        })
-        $("a").mouseleave(() => {
-            lightbox.style.transform = "scale(1)"
-        })
+        $(".loader").fadeOut("1000")
     })
 
     const handleMouseMove = e => {
@@ -64,6 +57,7 @@ function Cursor({ children }) {
 
     return (
         <div id="cursor" onMouseMove={handleMouseMove} onClick={handleClick} onMouseLeave={mouseLeave}>
+            <div className="loader"></div>
             <div id="cursor-lightbox"></div>
             {children}
         </div>
