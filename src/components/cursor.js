@@ -50,22 +50,15 @@ function Cursor({ children }) {
         }
     }
 
-    const mouseEnter = () => {
+    const mouseLeave = () => {
         if (typeof window !== `undefined` && typeof document !== `undefined`) {
             const lightbox = document.querySelector("#cursor-lightbox")
             lightbox.style.opacity = 0
         }
     }
 
-    const mouseLeave = () => {
-        if (typeof window !== `undefined` && typeof document !== `undefined`) {
-            const lightbox = document.querySelector("#cursor-lightbox")
-            lightbox.style.opacity = 1
-        }
-    }
-
     return (
-        <div id="cursor" onMouseMove={handleMouseMove} onClick={handleClick} onMouseLeave={mouseEnter} onMouseEnter={mouseLeave}>
+        <div id="cursor" onMouseMove={handleMouseMove} onClick={handleClick} onMouseLeave={mouseLeave}>
             <div id="cursor-lightbox"></div>
             {children}
         </div>
