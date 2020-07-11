@@ -2,6 +2,7 @@ import React, {useEffect} from "react"
 import { Helmet } from 'react-helmet'
 import { siteMetadata } from "../../gatsby-config"
 import { usePalette } from 'react-palette'
+import TransitionLink from "gatsby-plugin-transition-link"
 
 import AlbumCover from "../components/cover"
 import Cursor from "../components/cursor"
@@ -75,7 +76,7 @@ export default function Album(props) {
           <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
 
           {/* <footer className="footer-about">
-            {props.year}
+            PREV / NEXT
           </footer> */}
 
         </div>
