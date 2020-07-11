@@ -77,9 +77,9 @@ export default function Album(props) {
 
           <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
 
-          <footer className="footer-about">
-            About
-          </footer>
+          {/* <footer className="footer-about">
+            {props.year}
+          </footer> */}
 
         </div>
       </main>
