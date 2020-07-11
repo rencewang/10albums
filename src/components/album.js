@@ -43,6 +43,18 @@ export default function Album(props) {
   console.log(data.lightMuted)
   console.log(data.darkMuted)
 
+  let prevlink, nextlink = ""
+  if (typeof window !== `undefined`) {
+      const currentNum = isNaN(parseInt((window.location.pathname).replace("/", ""))) ? 0 : parseInt((window.location.pathname).replace("/", ""))
+      if (currentNum === 0) {
+          prevlink = "/2019"
+          nextlink = "/2011"
+      } else {
+          prevlink = "/" + (currentNum === 2011 ? "" : currentNum - 1)
+          nextlink = "/" + (currentNum === 2019 ? "" : currentNum + 1)
+      }
+  }
+
   return (
     <Cursor>
       <Helmet>
@@ -81,9 +93,15 @@ export default function Album(props) {
 
           <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
 
-          {/* <footer className="footer-about">
-            PREV / NEXT
-          </footer> */}
+          <footer className="footer-nav">
+            <AniLink swipe direction="right" swipe top="entry" to={prevlink} hex="#663399" entryOffset={80} duration={1}>
+              PREV
+            </AniLink>
+            <span> </span>/<span> </span>
+            <AniLink swipe direction="left" swipe top="entry" to={nextlink} hex="#663399" entryOffset={80} duration={1}>
+              NEXT
+            </AniLink>
+          </footer>
 
         </div>
       </div>

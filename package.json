@@ -3,7 +3,6 @@
   "private": true,
   "description": "music that defined the decade",
   "version": "0.1.0",
-  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -22,6 +21,7 @@
     "gatsby-plugin-sass": "^2.3.10",
     "gatsby-plugin-transition-link": "^1.20.2",
     "gatsby-source-rest-api": "^0.2.3",
+    "gsap": "^3.4.0",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
