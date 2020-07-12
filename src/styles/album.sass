@@ -1,7 +1,6 @@
 @import 'global'
 
 .album-container
-    position: relative
     height: 100vh
     width: 100vw
     
@@ -9,12 +8,21 @@
 .header-container 
     display: flex
     justify-content: space-between
-    margin: 0 10px 0 10px
+    padding: 0 10px 0 10px
+    @media only screen and (max-width: 550px)
+        position: fixed
+        height: 50px
+        top: 0
+        width: 100vw
+        background-image: linear-gradient(#808080, transparent)
+        z-index: 1000
 
 .header-text
     font-family: $TitleFont
     font-weight: 700
     font-size: 65px
+    @media only screen and (max-width: 750px)
+        font-size: 7vw
     
 .footer-nav
     @extend .header-text
@@ -22,6 +30,11 @@
     z-index: 500
     bottom: 5px
     left: 10px
+    @media only screen and (max-width: 550px)
+        display: flex
+        justify-content: space-between
+        left: auto
+        padding-left: 10px
 
 // For Album Title ONLY
 .album-name-container
@@ -36,6 +49,14 @@
     #album-name
         font-size: 300px
         line-height: 80%
+        // @media only screen and (max-width: 750px)
+        //     font-size: 20vw
+    @media only screen and (max-width: 750px)
+        margin: 0 0 0 10px
+    @media only screen and (max-width: 550px)
+        width: 65%
+        position: relative
+        float: left
 
 // For Text Content ONLY
 .album-description 
@@ -48,7 +69,23 @@
     position: fixed
     right: 10px
     bottom: calc(20px + #{$ImageWidth})
-    
+    @media only screen and (max-width: 1100px)
+        bottom: calc(20px + #{$ImageMedWidth})
+    @media only screen and (max-width: 750px)
+        width: 40%
+    @media only screen and (max-width: 550px)
+        right: auto
+        bottom: auto
+        width: 30%
+        position: relative
+        float: right
+        margin: 5px 10px 0 0
+
+// For Mobile Float Group ONLY
+.mobile-upper-group
+    @media only screen and (max-width: 550px)
+        display: flex
+        margin: 50px 0 10px 0
 
 .album-quote 
     font-family: $AlbumQuoteFont
@@ -59,6 +96,21 @@
     position: fixed
     bottom: 10px
     right: calc(20px + #{$ImageWidth})
+    @media only screen and (max-width: 1400px)
+        position: absolute
+        right: auto
+        bottom: 70px
+        left: 10px
+        text-align: left
+    @media only screen and (max-width: 750px)
+        bottom: calc(20px + 5vw)
+    @media only screen and (max-width: 550px)
+        font-size: 20px
+        text-align: right
+        position: relative
+        left: auto
+        bottom: auto
+        margin: 0 10px 60px 0
 
 .album-cover
     position: fixed
@@ -69,12 +121,35 @@
     .album-cover-image
         height: $ImageWidth
         width: $ImageWidth
-        
-        // transition: filter 0.5s
-        // &:hover
-        //     -webkit-filter: grayscale(100%)
-        //     filter: grayscale(100%)
+        @media only screen and (max-width: 1100px)
+            height: $ImageMedWidth
+            width: $ImageMedWidth
+        @media only screen and (max-width: 550px)
+            height: $ImageMobWidth
+            width: $ImageMobWidth
+            margin: 10px auto 10px auto
+            display: block
+    @media only screen and (max-width: 550px)
+        position: relative
+        width: 100%
+        bottom: auto
+        right: auto       
 
 .invisible-nav 
     opacity: 0
     pointer-events: none
+
+.mobile-nav-tooltip
+    display: none
+    @media only screen and (max-width: 550px)
+        display: block
+        width: 50%
+        font-family: $AlbumTitleFont
+        font-style: italic
+        font-size: 15px
+        line-height: 10px
+        text-align: right
+        padding-right: 10px
+        margin-top: auto
+        margin-bottom: 10px
+

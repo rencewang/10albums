@@ -14,7 +14,7 @@ export default function Album(props) {
     const titleClass = document.querySelector("#album-name")
     const titleName = props.name
     const width = window.innerWidth
-    if (width < 1600 && width > 750) {
+    if (width < 1600 && width > 550) {
       if (/^\d+$/.test(titleName)) {
         titleClass.style.fontSize = '28vw'
       } else if (!titleName.includes(" ") && !titleName.includes("•")) {
@@ -23,6 +23,17 @@ export default function Album(props) {
         titleClass.style.fontSize = '15vw'
       } else {
         titleClass.style.fontSize = '21vw'
+      }
+    }
+    if (width < 550) {
+      if (/^\d+$/.test(titleName)) {
+        titleClass.style.fontSize = '30vw'
+      } else if (!titleName.includes(" ") && !titleName.includes("•")) {
+        titleClass.style.fontSize = '20vw'
+      } else if (titleName.length > 15) {
+        titleClass.style.fontSize = '15vw'
+      } else {
+        titleClass.style.fontSize = '25vw'
       }
     }
   })
@@ -43,8 +54,8 @@ export default function Album(props) {
       </Helmet>
 
       <section>
-
         <div className="main-bg" style={{background: `linear-gradient(to right bottom, ${data.lightVibrant}, ${data.darkMuted})`}}></div>
+
         <div className="album-container">
 
           <header className="header-container">
@@ -57,11 +68,35 @@ export default function Album(props) {
             </div>
           </header>
           
-          <div className="album-name-container">
+          <div className="mobile-upper-group">
+            <div className="album-name-container">
+              <div id="album-name">
+                {props.name.replace("(Deluxe)", "")}
+              </div>
+            </div>
+
+            <div className="album-description">
+             {props.albumDescription}
+            </div>
+          </div>
+
+          {/* <div className="album-name-container">
             <div id="album-name">
               {props.name.replace("(Deluxe)", "")}
             </div>
-          </div>
+          </div> */}
+
+          {/* <div className="album-quote">
+              {props.quote.split("\n").map((i,key) => {
+                  return <div key={key}>{i}</div>;
+              })}
+          </div> */}
+
+          {/* <div className="album-description">
+            {props.albumDescription}
+          </div> */}
+
+          <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail} albumName={props.name}/>
 
           <div className="album-quote">
               {props.quote.split("\n").map((i,key) => {
@@ -69,14 +104,13 @@ export default function Album(props) {
               })}
           </div>
 
-          <div className="album-description">
-            {props.albumDescription}
-          </div>
-
-          <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail} albumName={props.name}/>
-
           <footer className="footer-nav">
-              {props.artist}
+              <div>
+                {props.artist}
+              </div>
+              <div className="mobile-nav-tooltip">
+                click on either side of the screen to navigate
+              </div>
           </footer>
 
         </div>
