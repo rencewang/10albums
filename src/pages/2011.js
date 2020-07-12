@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react"
 import Album from "../components/album"
-import Link from "gatsby-plugin-transition-link"
-import TransitionLink from "gatsby-plugin-transition-link"
 
 export default () => {
   const albumMBID = "c45e0e0e-48c9-4441-aac3-2f2b34202d3c"

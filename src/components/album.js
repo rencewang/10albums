@@ -42,7 +42,8 @@ export default function Album(props) {
         <title>{props.year} | {siteMetadata.title}</title>
       </Helmet>
 
-      <div>
+      <section>
+
         <div className="main-bg" style={{background: `linear-gradient(to right bottom, ${data.lightVibrant}, ${data.darkMuted})`}}></div>
         <div className="album-container">
 
@@ -79,7 +80,7 @@ export default function Album(props) {
           </footer>
 
         </div>
-      </div>
+      </section>
     </Cursor>
   )
 }

@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from "react"
-import Link from "gatsby-plugin-transition-link"
-import TransitionLink from "gatsby-plugin-transition-link"
-
 import Album from "../components/album"
 
 export default () => {

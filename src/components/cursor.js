@@ -56,7 +56,11 @@ function Cursor({ children }) {
     }
 
     return (
-        <div id="cursor" onMouseMove={handleMouseMove} onClick={handleClick} onMouseLeave={mouseLeave}>
+        <div id="cursor" 
+        onMouseMove={handleMouseMove} 
+        onClick={handleClick} 
+        onMouseLeave={mouseLeave}
+        >
             <div className="loader"></div>
             <div id="cursor-lightbox"></div>
             {children}
