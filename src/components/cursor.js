@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from "react"
+import React, {useEffect} from "react"
 import "../styles/global.sass"
 import $ from "jquery"
+import {Link} from "gatsby"
 
 function Cursor({ children }) {
     
@@ -41,9 +42,9 @@ function Cursor({ children }) {
     const handleClick = e => {
         if (typeof window !== `undefined`) {
             if (e.clientX > $(window).width() / 2) {
-                window.location = nextlink;
+                window.location = nextlink
             } else {
-                window.location = prevlink;
+                window.location = prevlink
             }
         }
     }
@@ -56,14 +57,18 @@ function Cursor({ children }) {
     }
 
     return (
-        <div id="cursor" 
+        <div id="cursor" role="region"
         onMouseMove={handleMouseMove} 
-        onClick={handleClick} 
+        onClick={handleClick}
         onMouseLeave={mouseLeave}
         >
             <div className="loader"></div>
             <div id="cursor-lightbox"></div>
             {children}
+            <div className="invisible-nav">
+                <Link to={prevlink}>PREV</Link>
+                <Link to={nextlink}>NEXT</Link>
+            </div>
         </div>
     )
 }

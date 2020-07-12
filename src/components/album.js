@@ -29,12 +29,12 @@ export default function Album(props) {
 
   // primary colors of album cover returned
   const { data, loading, error } = usePalette(props.albumCover)
-  console.log(data.vibrant)
-  console.log(data.muted)
-  console.log(data.lightVibrant)
-  console.log(data.darkVibrant)
-  console.log(data.lightMuted)
-  console.log(data.darkMuted)
+  // console.log(data.vibrant)
+  // console.log(data.muted)
+  // console.log(data.lightVibrant)
+  // console.log(data.darkVibrant)
+  // console.log(data.lightMuted)
+  // console.log(data.darkMuted)
 
   return (
     <Cursor>
@@ -73,7 +73,7 @@ export default function Album(props) {
             {props.albumDescription}
           </div>
 
-          <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail}/>
+          <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail} albumName={props.name}/>
 
           <footer className="footer-nav">
               {props.artist}
