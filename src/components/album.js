@@ -80,22 +80,6 @@ export default function Album(props) {
             </div>
           </div>
 
-          {/* <div className="album-name-container">
-            <div id="album-name">
-              {props.name.replace("(Deluxe)", "")}
-            </div>
-          </div> */}
-
-          {/* <div className="album-quote">
-              {props.quote.split("\n").map((i,key) => {
-                  return <div key={key}>{i}</div>;
-              })}
-          </div> */}
-
-          {/* <div className="album-description">
-            {props.albumDescription}
-          </div> */}
-
           <AlbumCover albumCover={props.albumCover} albumDetail={props.albumDetail} albumName={props.name}/>
 
           <div className="album-quote">
