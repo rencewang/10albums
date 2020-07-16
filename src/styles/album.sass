@@ -1,8 +1,9 @@
 @import 'global'
 
 .album-container
-    height: 100%
+    min-height: 100%
     width: 100%
+    overflow-x: hidden
     
 // For Header & Footer ONLY
 .header-container 
@@ -14,7 +15,7 @@
         height: 50px
         top: 0
         width: 100vw
-        background-image: linear-gradient(#808080, transparent)
+        background-image: linear-gradient(#808080, rgba(255,255,255,0))
         z-index: 1000
 
 .header-text
@@ -36,12 +37,17 @@
     @media only screen and (max-width: 550px)
         display: flex
         justify-content: space-between
-        left: auto
+        position: absolute
+        right: 0
         bottom: 0
+        left: 0
         padding: 0 10px 10px 10px
-        background-image: linear-gradient(transparent 5%, #808080 30%)
+        background-image: linear-gradient(rgba(255,255,255,0) 5%, #808080 30%)
         z-index: 1000
         height: 40px
+        div:first-child 
+            font-size: 5vw
+            padding-top: 5px
 
 // For Album Title ONLY
 .album-name-container
@@ -123,7 +129,7 @@
         position: relative
         left: auto
         bottom: auto
-        margin: 0 10px 75px 0
+        margin: 0 10px 30px 0
     @media only screen and (min-width: 2000px)
         font-size: 2.5vw
         line-height: normal
