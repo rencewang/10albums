@@ -51,17 +51,18 @@ a
     color: #000
 
 // Custom Cursor ONLY
-#cursor-lightbox 
-    position: fixed
-    width: 150px
-    height: 150px
-    border-radius: 50%
-    background-color: #f5f5f5
-    pointer-events: none
-    mix-blend-mode: difference
-    z-index: 999
-    transition: opacity 0.5s, transform 0.5s
-    opacity: 0
+@media (hover: hover) 
+    #cursor-lightbox 
+        position: fixed
+        width: 150px
+        height: 150px
+        border-radius: 50%
+        background-color: #f5f5f5
+        pointer-events: none
+        mix-blend-mode: difference
+        z-index: 999
+        transition: opacity 0.5s, transform 0.5s
+        opacity: 0
 
 #cursor 
     @include fixedbg
